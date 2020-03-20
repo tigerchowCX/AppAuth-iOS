@@ -476,32 +476,32 @@ NS_ASSUME_NONNULL_BEGIN
 
       // OpenID Connect Core Section 3.1.3.7. rule #9
       // Validates that the current time is before the expiry time.
-      NSTimeInterval expiresAtDifference = [idToken.expiresAt timeIntervalSinceNow];
-      if (expiresAtDifference < 0) {
-        NSError *invalidIDToken =
-            [OIDErrorUtilities errorWithCode:OIDErrorCodeIDTokenFailedValidationError
-                             underlyingError:nil
-                                 description:@"ID Token expired"];
-        dispatch_async(dispatch_get_main_queue(), ^{
-          callback(nil, invalidIDToken);
-        });
-        return;
-      }
+//      NSTimeInterval expiresAtDifference = [idToken.expiresAt timeIntervalSinceNow];
+//      if (expiresAtDifference < 0) {
+//        NSError *invalidIDToken =
+//            [OIDErrorUtilities errorWithCode:OIDErrorCodeIDTokenFailedValidationError
+//                             underlyingError:nil
+//                                 description:@"ID Token expired"];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//          callback(nil, invalidIDToken);
+//        });
+//        return;
+//      }
       
       // OpenID Connect Core Section 3.1.3.7. rule #10
       // Validates that the issued at time is not more than +/- 10 minutes on the current time.
-      NSTimeInterval issuedAtDifference = [idToken.issuedAt timeIntervalSinceNow];
-      if (fabs(issuedAtDifference) > 600) {
-        NSError *invalidIDToken =
-          [OIDErrorUtilities errorWithCode:OIDErrorCodeIDTokenFailedValidationError
-                           underlyingError:nil
-                               description:@"Issued at time is more than 5 minutes before or after "
-                                            "the current time"];
-        dispatch_async(dispatch_get_main_queue(), ^{
-          callback(nil, invalidIDToken);
-        });
-        return;
-      }
+//      NSTimeInterval issuedAtDifference = [idToken.issuedAt timeIntervalSinceNow];
+//      if (fabs(issuedAtDifference) > 600) {
+//        NSError *invalidIDToken =
+//          [OIDErrorUtilities errorWithCode:OIDErrorCodeIDTokenFailedValidationError
+//                           underlyingError:nil
+//                               description:@"Issued at time is more than 5 minutes before or after "
+//                                            "the current time"];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//          callback(nil, invalidIDToken);
+//        });
+//        return;
+//      }
 
       // Only relevant for the authorization_code response type
       if ([tokenResponse.request.grantType isEqual:OIDGrantTypeAuthorizationCode]) {

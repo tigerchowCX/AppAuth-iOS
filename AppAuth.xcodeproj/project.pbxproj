@@ -81,8 +81,6 @@
 		341742201C5D82D3000EF209 /* OIDTokenResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 341742101C5D82D3000EF209 /* OIDTokenResponseTests.m */; };
 		341742211C5D82D3000EF209 /* OIDURLQueryComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 341742121C5D82D3000EF209 /* OIDURLQueryComponentTests.m */; };
 		341742221C5D82D3000EF209 /* OIDURLQueryComponentTestsIOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = 341742131C5D82D3000EF209 /* OIDURLQueryComponentTestsIOS7.m */; };
-		3417422B1C5D8502000EF209 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417422A1C5D8502000EF209 /* SafariServices.framework */; };
-		3417422D1C5D850C000EF209 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417422C1C5D850C000EF209 /* Security.framework */; };
 		341AA4D31E7F392C00FCA5C6 /* libAppAuth-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 340DAE4E1D58216A00EC285B /* libAppAuth-macOS.a */; };
 		341AA4D91E7F393500FCA5C6 /* OIDAuthorizationRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 341742011C5D82D3000EF209 /* OIDAuthorizationRequestTests.m */; };
 		341AA4F21E7F39F100FCA5C6 /* libAppAuth-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 341E707E1DE18744004353C1 /* libAppAuth-tvOS.a */; };
@@ -571,8 +569,6 @@
 		341742121C5D82D3000EF209 /* OIDURLQueryComponentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OIDURLQueryComponentTests.m; sourceTree = "<group>"; };
 		341742131C5D82D3000EF209 /* OIDURLQueryComponentTestsIOS7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OIDURLQueryComponentTestsIOS7.m; sourceTree = "<group>"; };
 		341742231C5D8317000EF209 /* UnitTestsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UnitTestsInfo.plist; sourceTree = "<group>"; };
-		3417422A1C5D8502000EF209 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		3417422C1C5D850C000EF209 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		341AA4CE1E7F392C00FCA5C6 /* AppAuth-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppAuth-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341AA4ED1E7F39F100FCA5C6 /* AppAuth-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppAuth-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E707E1DE18744004353C1 /* libAppAuth-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAppAuth-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -606,6 +602,7 @@
 		60140F821DE43BAF00DA0DC3 /* OIDRegistrationRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OIDRegistrationRequestTests.m; sourceTree = "<group>"; };
 		60140F841DE43C8C00DA0DC3 /* OIDRegistrationResponseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OIDRegistrationResponseTests.h; sourceTree = "<group>"; };
 		60140F851DE43CC700DA0DC3 /* OIDRegistrationResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OIDRegistrationResponseTests.m; sourceTree = "<group>"; };
+		8AD8C86D24246CE300D915D4 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		A5EEF1FD20CF07760044F470 /* OIDTokenUtilitiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OIDTokenUtilitiesTests.m; sourceTree = "<group>"; };
 		A6339DA3203211320043D1C9 /* OIDAuthorizationFlowSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIDAuthorizationFlowSession.h; sourceTree = "<group>"; };
 		A6DEAB982018E4A20022AC32 /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIDExternalUserAgent.h; sourceTree = "<group>"; };
@@ -638,8 +635,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3417422D1C5D850C000EF209 /* Security.framework in Frameworks */,
-				3417422B1C5D8502000EF209 /* SafariServices.framework in Frameworks */,
 				341741F51C5D8283000EF209 /* libAppAuth-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +743,7 @@
 		340E73731C5D819B0076B1F6 = {
 			isa = PBXGroup;
 			children = (
+				8AD8C86D24246CE300D915D4 /* Package.swift */,
 				341742291C5D84D0000EF209 /* Frameworks */,
 				341741FB1C5D82D3000EF209 /* UnitTests */,
 				341741AE1C5D8243000EF209 /* Source */,
@@ -879,8 +875,6 @@
 		341742291C5D84D0000EF209 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3417422C1C5D850C000EF209 /* Security.framework */,
-				3417422A1C5D8502000EF209 /* SafariServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1392,6 +1386,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 340E73731C5D819B0076B1F6;
